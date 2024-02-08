@@ -3,6 +3,8 @@ fileSystem = params.dataLocation.contains(':') ? params.dataLocation.split(':')[
 
 // Header log info
 log.info "\nPARAMETERS SUMMARY"
+log.info "jobId                                 : ${params.jobId}"
+log.info "jobId                                 : ${params.job_id}"
 log.info "mainScript                            : ${params.mainScript}"
 log.info "config                                : ${params.config}"
 log.info "fileSystem                            : ${fileSystem}"
