@@ -3,8 +3,6 @@ fileSystem = params.dataLocation.contains(':') ? params.dataLocation.split(':')[
 
 // Header log info
 log.info "\nPARAMETERS SUMMARY"
-log.info "jobId                                 : ${params.jobId}"
-log.info "jobId                                 : ${params.job_id}"
 log.info "mainScript                            : ${params.mainScript}"
 log.info "config                                : ${params.config}"
 log.info "fileSystem                            : ${fileSystem}"
@@ -71,6 +69,7 @@ process processA {
 	script:
 	"""
 	${params.pre_script}
+	printenv
 	# Simulate the time the processes takes to finish
 	pwd=`basename \${PWD} | cut -c1-6`
 	echo \$pwd
