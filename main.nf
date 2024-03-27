@@ -1,7 +1,7 @@
 // If gs:// or s3:// or https://, else it's local
 fileSystem = params.dataLocation.contains(':') ? params.dataLocation.split(':')[0] : 'local'
 
-// Header log info
+// Header log info - hello world
 log.info "\nPARAMETERS SUMMARY"
 log.info "jobID                                 : ${params.job_id}"
 log.info "mainScript                            : ${params.mainScript}"
